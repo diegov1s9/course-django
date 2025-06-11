@@ -26,6 +26,7 @@ python3 -m venv nombre_proyecto
 
 # Activar
 source nombre_proyecto/bin/activate
+.\venv\Scripts\activate # Windows
 
 # Instalar paquetes
 pip install lo-que-necesites
