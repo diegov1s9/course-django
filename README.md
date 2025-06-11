@@ -77,3 +77,22 @@ email: mail@admin.com
 password: admin123
 ```
 6. Se agrega una vista (views.py), se crea un folder para templates, se configura en settings.py. y se crea una url para la nueva vista.
+
+7. Proteger información sensible en settings.py mediante django-environ
+```
+pip instalar django-environ
+```
+o desde requirements.txt 
+- crear .env en core
+- configurar en settings.py 
+    ```
+    import environ
+    # Set up environment variables
+    env = environ.Env()
+    # Read .env file
+    environ.Env.read_env()  
+
+    # ejemplos de uso:
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+    DEBUG = os.environ.get('DEBUG', default=False)
+    ```
