@@ -76,3 +76,4 @@ username: admin
 email: mail@admin.com
 password: admin123
 ```
+6. Se agrega una vista (views.py), se crea un folder para templates, se configura en settings.py. y se crea una url para la nueva vista.
