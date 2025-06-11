@@ -63,3 +63,16 @@ deactivate
     python manage.py runserver
     ```
     > Accede a http://127.0.0.1:8000/ en tu navegador para ver el proyecto en funcionamiento.
+
+5. **Ejecutar migraciones**
+```
+python manage.py migrate
+```
+
+5. **Crear un usuario administrador**
+```
+python manage.py createsuperuser
+username: admin
+email: mail@admin.com
+password: admin123
+```
