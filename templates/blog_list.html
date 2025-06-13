@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:blog="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django</title>
+</head>
+<body>
+    <h1>Blog List</h1>
+    <br>
+    <table>
+        <caption>
+            List of Post
+        </caption>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Detail</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody> 
+            {%for post in posts%}
+            <tr>
+                <td>{{ post.title}} </td>
+                <td> <a href="{% url "blog:detail" post.id %}"> Detail </a> </td>
+                <td> <a href="{% url "blog:update" post.id %}"> Update </a> </td>
+                <td> <a href="{% url "blog:delete" post.id %}"> Delete </a> </td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+    <br>
+    <h3>Create Post</h3>
+    <a href="{% url "blog:create" %}" >Create</a>
+</body>
+</html>
